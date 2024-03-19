@@ -6,7 +6,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://backend-dskuts5pn-ngumi22.vercel.app",
+    baseUrl: "https://backend-ax1s2utwt-ngumi22.vercel.app",
     headers: {
       "Access-Control-Allow-Credentials": "true",
       "Access-Control-Allow-Origin": "https://frontend-rho-sand.vercel.app",
