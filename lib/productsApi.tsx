@@ -6,14 +6,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://backend-ax1s2utwt-ngumi22.vercel.app",
-    headers: {
-      "Access-Control-Allow-Credentials": "true",
-      "Access-Control-Allow-Origin": "https://frontend-rho-sand.vercel.app",
-      "Access-Control-Allow-Methods": "GET, OPTIONS, PATCH, DELETE, POST, PUT",
-      "Access-Control-Allow-Headers":
-        "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
-    },
+    baseUrl: "https://backend-2q3zm68aa-ngumi22.vercel.app",
   }),
   endpoints: (builder) => ({
     getAllProducts: builder.query({
