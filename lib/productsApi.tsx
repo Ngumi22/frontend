@@ -6,16 +6,14 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://backend-sigma-swart.vercel.app/",
+    baseUrl: "https://your-vercel-serverless-function-url",
   }),
   endpoints: (builder) => ({
     getAllProducts: builder.query({
-      //get all products
       query: () => `products`,
     }),
-
     getCategory: builder.query({
-      query: (category) => `products/category/${category}`, //get category
+      query: (category) => `products/category/${category}`,
     }),
   }),
 });
