@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://backend-kej7klhk0-ngumi22.vercel.app",
+    baseUrl: "https://backend-4uzr02waq-ngumi22.vercel.app",
     prepareHeaders: (headers) => {
       // Add CORS headers
       headers.set("Access-Control-Allow-Origin", "*");
