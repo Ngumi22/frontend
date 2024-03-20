@@ -1,4 +1,3 @@
-// Need to use the React-specific entry point to import createApi
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // Define a service using a base URL and expected endpoints
@@ -6,7 +5,12 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://backend-ggx1d9m5i-ngumi22.vercel.app",
+    baseUrl: "https://backend-kej7klhk0-ngumi22.vercel.app",
+    prepareHeaders: (headers) => {
+      // Add CORS headers
+      headers.set("Access-Control-Allow-Origin", "*");
+      return headers;
+    },
   }),
   endpoints: (builder) => ({
     getAllProducts: builder.query({
