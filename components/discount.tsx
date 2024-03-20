@@ -14,10 +14,6 @@ export default function DiscountedItems() {
     dispatch(addToCart(product));
   };
 
-  if (error) {
-    return <p>Error loading products</p>;
-  }
-
   const discountedProducts: Product[] = allProducts
     ? allProducts.filter(
         (product: { discountPercentage: number }) =>
@@ -43,7 +39,7 @@ export default function DiscountedItems() {
         </div>
       </div>
 
-      {isLoading ? (
+      {isLoading && error ? (
         <LoadingSkeleton />
       ) : (
         <ul className="grid m-0 gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-content-center justify-items-center">
